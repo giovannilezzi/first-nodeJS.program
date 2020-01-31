@@ -13,4 +13,11 @@ of(null)
   tap(({data}) => console.log('RESS --->', data)), // {data} sarebbe res.data
   mergeMap(({ data }) => axios.get(`https://5e32bfe7e0161c00140abb4d.mockapi.io/api/nodeJS/users/${data[0].id}`)),
   tap(({data}) => console.log('RESS --->', data)), // {data} sarebbe res.data
-).toPromise()
+  mergeMap(({ data }) => axios.put(`https://5e32bfe7e0161c00140abb4d.mockapi.io/api/nodeJS/users/${data.id}`, {
+    name: "new name changed from code"
+  })),
+).subscribe(
+  (({ data }) => {
+    console.log('DATA____>>>>', 'data', data, data.name)
+  })
+)
