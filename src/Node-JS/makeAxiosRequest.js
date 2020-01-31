@@ -34,7 +34,7 @@ axios
   .then(() => console.log('Always executed'));
 
 axios
-  .delete("https://5e32bfe7e0161c00140abb4d.mockapi.io/api/nodeJS/users/4")
+  .delete("https://5e32bfe7e0161c00140abb4d.mockapi.io/api/nodeJS/users/5")
   .then(({ data }) => console.log(data))
   .catch(error =>console.log(error))
   .then(() => console.log('Always executed'));
