@@ -1,7 +1,7 @@
 const Joi = require('@hapi/joi')
 const express = require('express');
 const app = express();
-app.use(express.json()) // per parsare il body in JSON
+app.use(express.json()) // per parsificare il body in JSON
 
 const courses = [
     {id: 1, name: 'course1'},
